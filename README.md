@@ -22,5 +22,4 @@
 <img src="S3_mini_v1.0.0_pinout.jpg" width="600"/>
 
 ### DC 360 Mini
-<img src="DC-DC Mini-360_1.jpg" width="600"/>
-<img src="DC-DC Mini-360_2.jpg" width="600"/>
+<img src="DC-DC Mini-360_1.jpg" width="300"/><img src="DC-DC Mini-360_2.jpg" width="300"/>
