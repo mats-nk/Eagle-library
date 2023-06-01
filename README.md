@@ -11,7 +11,7 @@
 ## Pinout
 
 ### S2 Mini
-<img src="img/S2_mini_v1.0.0_pinout.jpg" width="600"/>
+<img src="Img/S2_mini_v1.0.0_pinout.jpg" width="600"/>
 
 ### S3 Mini
 <img src="img/S3_mini_v1.0.0_pinout.jpg" width="600"/>
