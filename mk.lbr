@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -146,35 +146,36 @@ https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
 <text x="22.2" y="-5.7" size="1.27" layer="21">O</text>
 </package>
 <package name="WEMOS_S3_MINI">
-<description>&lt;b&gt;Wemos S2 Mini&lt;/b&gt;&lt;br&gt;
-https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
+<description>&lt;b&gt;Wemos S3 Mini&lt;/b&gt;&lt;br&gt;
+https://www.wemos.cc/en/latest/s3/s3_mini.html&lt;br&gt;
 &lt;br&gt;
 &lt;b&gt;Features:&lt;/b&gt;&lt;br&gt;
  -  based ESP32-S2FN4R2 WIFI IC&lt;br&gt;
- -  Type-C USB&lt;br&gt;
+ -  2.4 GHz Wi-Fi&lt;br&gt;
+ -  Bluetooth LE&lt;br&gt;
  -  4MB Flash&lt;br&gt;
  -  2MB PSRAM&lt;br&gt;
  -  27x IO&lt;br&gt;
- -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;
- -  Compatible with LOLIN D1 mini shields</description>
+ -  1x RGB LED (IO47)&lt;br&gt;
+ -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;</description>
 <pad name="14" x="2.54" y="0" drill="0.6"/>
 <pad name="3V3" x="0" y="0" drill="0.6"/>
-<pad name="12" x="0" y="2.54" drill="0.6"/>
-<pad name="13" x="2.54" y="2.54" drill="0.6"/>
+<pad name="10" x="0" y="2.54" drill="0.6"/>
+<pad name="9" x="2.54" y="2.54" drill="0.6"/>
 <pad name="11" x="0" y="5.08" drill="0.6"/>
-<pad name="9" x="0" y="7.62" drill="0.6"/>
-<pad name="7" x="0" y="10.16" drill="0.6"/>
-<pad name="5" x="0" y="12.7" drill="0.6"/>
-<pad name="3" x="0" y="15.24" drill="0.6"/>
+<pad name="13" x="0" y="7.62" drill="0.6"/>
+<pad name="12" x="0" y="10.16" drill="0.6"/>
+<pad name="4" x="0" y="12.7" drill="0.6"/>
+<pad name="2" x="0" y="15.24" drill="0.6"/>
 <pad name="EN" x="0" y="17.78" drill="0.6"/>
-<pad name="10" x="2.54" y="5.08" drill="0.6"/>
-<pad name="8" x="2.54" y="7.62" drill="0.6"/>
+<pad name="8" x="2.54" y="5.08" drill="0.6"/>
+<pad name="7" x="2.54" y="7.62" drill="0.6"/>
 <pad name="6" x="2.54" y="10.16" drill="0.6"/>
-<pad name="4" x="2.54" y="12.7" drill="0.6"/>
-<pad name="2" x="2.54" y="15.24" drill="0.6"/>
+<pad name="5" x="2.54" y="12.7" drill="0.6"/>
+<pad name="3" x="2.54" y="15.24" drill="0.6"/>
 <pad name="1" x="2.54" y="17.78" drill="0.6"/>
-<pad name="40" x="20.32" y="17.78" drill="0.6"/>
-<pad name="39" x="22.86" y="17.78" drill="0.6"/>
+<pad name="33" x="20.32" y="17.78" drill="0.6"/>
+<pad name="43" x="22.86" y="17.78" drill="0.6"/>
 <pad name="VBUS" x="22.86" y="0" drill="0.6"/>
 <pad name="15" x="20.32" y="0" drill="0.6"/>
 <pad name="GND1" x="20.32" y="2.54" drill="0.6"/>
@@ -182,15 +183,15 @@ https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
 <pad name="17" x="20.32" y="5.08" drill="0.6"/>
 <pad name="21" x="20.32" y="7.62" drill="0.6"/>
 <pad name="34" x="20.32" y="10.16" drill="0.6"/>
-<pad name="36" x="20.32" y="12.7" drill="0.6"/>
-<pad name="38" x="20.32" y="15.24" drill="0.6"/>
+<pad name="38" x="20.32" y="12.7" drill="0.6"/>
+<pad name="37" x="20.32" y="15.24" drill="0.6"/>
 <pad name="16" x="22.86" y="5.08" drill="0.6"/>
 <pad name="18" x="22.86" y="7.62" drill="0.6"/>
-<pad name="33" x="22.86" y="10.16" drill="0.6"/>
-<pad name="35" x="22.86" y="12.7" drill="0.6"/>
-<pad name="37" x="22.86" y="15.24" drill="0.6"/>
+<pad name="35" x="22.86" y="10.16" drill="0.6"/>
+<pad name="36" x="22.86" y="12.7" drill="0.6"/>
+<pad name="44" x="22.86" y="15.24" drill="0.6"/>
 <text x="11.29" y="-4.44" size="1.27" layer="21" align="center">USB C</text>
-<text x="11.43" y="7.97" size="1.27" layer="21" align="bottom-center">Wemos S2 Mini</text>
+<text x="11.43" y="7.97" size="1.27" layer="21" align="bottom-center">Wemos S3 Mini</text>
 <text x="11.53" y="22.09" size="1.27" layer="42" align="bottom-center">Antenna</text>
 <wire x1="-1.3" y1="22.9" x2="-1.3" y2="-1.1" width="0.127" layer="21"/>
 <wire x1="-1.3" y1="-1.1" x2="0.4" y2="-2" width="0.127" layer="21"/>
@@ -234,6 +235,17 @@ https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
 </packages>
 <symbols>
 <symbol name="WEMOS_S2_MINI">
+<description>&lt;b&gt;Wemos S2 Mini&lt;/b&gt;&lt;br&gt;
+https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Features:&lt;/b&gt;&lt;br&gt;
+ -  based ESP32-S2FN4R2 WIFI IC&lt;br&gt;
+ -  Type-C USB&lt;br&gt;
+ -  4MB Flash&lt;br&gt;
+ -  2MB PSRAM&lt;br&gt;
+ -  27x IO&lt;br&gt;
+ -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;
+ -  Compatible with LOLIN D1 mini shields</description>
 <wire x1="0" y1="0" x2="0" y2="48.26" width="0.254" layer="94"/>
 <wire x1="0" y1="48.26" x2="25.4" y2="48.26" width="0.254" layer="94"/>
 <wire x1="25.4" y1="48.26" x2="25.4" y2="0" width="0.254" layer="94"/>
@@ -273,6 +285,19 @@ https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
 <text x="12.7" y="44.196" size="2.1844" layer="95" align="bottom-center">Wemos S2 Mini</text>
 </symbol>
 <symbol name="WEMOS_S3_MINI">
+<description>&lt;b&gt;Wemos S3 Mini&lt;/b&gt;&lt;br&gt;
+https://www.wemos.cc/en/latest/s3/s3_mini.html&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Features:&lt;/b&gt;&lt;br&gt;
+ -  based ESP32-S2FN4R2 WIFI IC&lt;br&gt;
+ -  Type-C USB&lt;br&gt;
+ -  2.4 GHz Wi-Fi&lt;br&gt;
+ -  Bluetooth LE&lt;br&gt;
+ -  4MB Flash&lt;br&gt;
+ -  2MB PSRAM&lt;br&gt;
+ -  27x IO&lt;br&gt;
+ -  1x RGB LED (IO47)&lt;br&gt;
+ -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;</description>
 <wire x1="0" y1="0" x2="0" y2="48.26" width="0.254" layer="94"/>
 <wire x1="0" y1="48.26" x2="25.4" y2="48.26" width="0.254" layer="94"/>
 <wire x1="25.4" y1="48.26" x2="25.4" y2="0" width="0.254" layer="94"/>
@@ -304,19 +329,26 @@ https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
 <pin name="GPIO35" x="30.48" y="22.86" length="middle" rot="R180"/>
 <pin name="GPIO37" x="30.48" y="17.78" length="middle" rot="R180"/>
 <pin name="GPIO38" x="30.48" y="15.24" length="middle" rot="R180"/>
-<pin name="GPIO39" x="30.48" y="12.7" length="middle" rot="R180"/>
-<pin name="GPIO40" x="30.48" y="10.16" length="middle" rot="R180"/>
+<pin name="GPIO43" x="30.48" y="12.7" length="middle" rot="R180"/>
+<pin name="GPIO44" x="30.48" y="10.16" length="middle" rot="R180"/>
 <pin name="VBUS" x="30.48" y="7.62" length="middle" direction="pwr" rot="R180"/>
 <pin name="GND2" x="30.48" y="5.08" length="middle" direction="pwr" rot="R180"/>
 <pin name="GND1" x="30.48" y="2.54" length="middle" direction="pwr" rot="R180"/>
-<text x="12.7" y="44.196" size="2.1844" layer="95" align="bottom-center">Wemos S2 Mini</text>
+<text x="12.7" y="44.196" size="2.1844" layer="95" align="bottom-center">Wemos S3 Mini</text>
 </symbol>
 </symbols>
 <devicesets>
 <deviceset name="WEMOS_S2_MINI">
-<description>Wemos S2 Mini
-
-https://www.wemos.cc/en/latest/s2/s2_mini.html</description>
+<description>&lt;b&gt;Wemos S2 Mini&lt;/b&gt;&lt;br&gt;
+https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Features:&lt;/b&gt;&lt;br&gt;
+ -  based ESP32-S2FN4R2 WIFI IC&lt;br&gt;
+ -  Type-C USB&lt;br&gt;
+ -  4MB Flash&lt;br&gt;
+ -  2MB PSRAM&lt;br&gt;
+ -  27x IO&lt;br&gt;
+ -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;</description>
 <gates>
 <gate name="G$1" symbol="WEMOS_S2_MINI" x="5.08" y="-2.54"/>
 </gates>
@@ -362,22 +394,59 @@ https://www.wemos.cc/en/latest/s2/s2_mini.html</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="WEMOS_C3_MINI">
+<deviceset name="WEMOS_S3_MINI" uservalue="yes">
+<description>&lt;b&gt;Wemos S3 Mini&lt;/b&gt;&lt;br&gt;
+https://www.wemos.cc/en/latest/s3/s3_mini.html&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Features:&lt;/b&gt;&lt;br&gt;
+ -  based ESP32-S2FN4R2 WIFI IC&lt;br&gt;
+ -  Type-C USB&lt;br&gt;
+ -  2.4 GHz Wi-Fi&lt;br&gt;
+ -  Bluetooth LE&lt;br&gt;
+ -  4MB Flash&lt;br&gt;
+ -  2MB PSRAM&lt;br&gt;
+ -  27x IO&lt;br&gt;
+ -  1x RGB LED (IO47)&lt;br&gt;
+ -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;</description>
 <gates>
+<gate name="G$1" symbol="WEMOS_S3_MINI" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="WEMOS_S3_MINI">
-<gates>
-</gates>
-<devices>
-<device name="">
+<device name="" package="WEMOS_S3_MINI">
+<connects>
+<connect gate="G$1" pin="3V3" pad="3V3"/>
+<connect gate="G$1" pin="EN" pad="EN"/>
+<connect gate="G$1" pin="GND1" pad="GND1"/>
+<connect gate="G$1" pin="GND2" pad="GND2"/>
+<connect gate="G$1" pin="GPIO1" pad="1"/>
+<connect gate="G$1" pin="GPIO10" pad="10"/>
+<connect gate="G$1" pin="GPIO11" pad="11"/>
+<connect gate="G$1" pin="GPIO12" pad="12"/>
+<connect gate="G$1" pin="GPIO13" pad="13"/>
+<connect gate="G$1" pin="GPIO14" pad="14"/>
+<connect gate="G$1" pin="GPIO15" pad="15"/>
+<connect gate="G$1" pin="GPIO16" pad="16"/>
+<connect gate="G$1" pin="GPIO17" pad="17"/>
+<connect gate="G$1" pin="GPIO18" pad="18"/>
+<connect gate="G$1" pin="GPIO2" pad="2"/>
+<connect gate="G$1" pin="GPIO21" pad="21"/>
+<connect gate="G$1" pin="GPIO3" pad="3"/>
+<connect gate="G$1" pin="GPIO33" pad="33"/>
+<connect gate="G$1" pin="GPIO34" pad="34"/>
+<connect gate="G$1" pin="GPIO35" pad="35"/>
+<connect gate="G$1" pin="GPIO36" pad="36"/>
+<connect gate="G$1" pin="GPIO37" pad="37"/>
+<connect gate="G$1" pin="GPIO38" pad="38"/>
+<connect gate="G$1" pin="GPIO4" pad="4"/>
+<connect gate="G$1" pin="GPIO43" pad="43"/>
+<connect gate="G$1" pin="GPIO44" pad="44"/>
+<connect gate="G$1" pin="GPIO5" pad="5"/>
+<connect gate="G$1" pin="GPIO6" pad="6"/>
+<connect gate="G$1" pin="GPIO7" pad="7"/>
+<connect gate="G$1" pin="GPIO8" pad="8"/>
+<connect gate="G$1" pin="GPIO9" pad="9"/>
+<connect gate="G$1" pin="VBUS" pad="VBUS"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
