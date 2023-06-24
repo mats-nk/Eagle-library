@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -38,7 +38,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -232,6 +232,20 @@ https://www.wemos.cc/en/latest/s3/s3_mini.html&lt;br&gt;
 <text x="1" y="-5.6" size="1.27" layer="21">RST</text>
 <text x="22.2" y="-5.7" size="1.27" layer="21">O</text>
 </package>
+<package name="EY9">
+<wire x1="0" y1="0" x2="17.5" y2="0" width="0.1524" layer="20"/>
+<wire x1="17.5" y1="0" x2="17.5" y2="12" width="0.1524" layer="20"/>
+<wire x1="17.5" y1="12" x2="0" y2="12" width="0.1524" layer="20"/>
+<wire x1="0" y1="12" x2="0" y2="0" width="0.1524" layer="20"/>
+<hole x="1.1" y="1.6" drill="1.1"/>
+<hole x="16.4" y="1.6" drill="1.1"/>
+<hole x="1.1" y="10.4" drill="1.1"/>
+<hole x="16.4" y="10.4" drill="1.1"/>
+<text x="2.5" y="1" size="1.016" layer="27">- Out</text>
+<text x="2.5" y="10" size="1.016" layer="27">+ Out</text>
+<text x="12" y="10" size="1.016" layer="27">+ In</text>
+<text x="12" y="1" size="1.016" layer="27">- In</text>
+</package>
 </packages>
 <symbols>
 <symbol name="WEMOS_S2_MINI">
@@ -336,19 +350,44 @@ https://www.wemos.cc/en/latest/s3/s3_mini.html&lt;br&gt;
 <pin name="GND1" x="30.48" y="2.54" length="middle" direction="pwr" rot="R180"/>
 <text x="12.7" y="44.196" size="2.1844" layer="95" align="bottom-center">Wemos S3 Mini</text>
 </symbol>
+<symbol name="DC-DC">
+<wire x1="-8.382" y1="-7.62" x2="8.382" y2="-7.62" width="0.1524" layer="94"/>
+<wire x1="8.382" y1="-7.62" x2="8.382" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="8.382" y1="-5.08" x2="8.382" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="8.382" y1="5.08" x2="8.382" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="8.382" y1="7.62" x2="-8.382" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="-8.382" y1="7.62" x2="-8.382" y2="5.08" width="0.1524" layer="94"/>
+<pin name="+IN" x="-12.7" y="5.08" length="short" direction="pwr"/>
+<pin name="-IN" x="-12.7" y="-5.08" length="short" direction="pwr"/>
+<pin name="+OUT" x="12.7" y="5.08" length="short" direction="pwr" rot="R180"/>
+<pin name="-OUT" x="12.7" y="-5.08" length="short" direction="pwr" rot="R180"/>
+<wire x1="-8.382" y1="5.08" x2="-8.382" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-8.382" y1="-5.08" x2="-8.382" y2="-7.62" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-8.382" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="-8.382" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="8.382" y1="5.08" x2="10.414" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="8.382" y1="-5.08" x2="10.16" y2="-5.08" width="0.1524" layer="94"/>
+<text x="-0.762" y="-2.286" size="1.27" layer="96" align="bottom-center">DC/DC
+Converter</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="WEMOS_S2_MINI">
-<description>&lt;b&gt;Wemos S2 Mini&lt;/b&gt;&lt;br&gt;
-https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Features:&lt;/b&gt;&lt;br&gt;
- -  based ESP32-S2FN4R2 WIFI IC&lt;br&gt;
+<description>&lt;h1&gt;Wemos S2 Mini&lt;/h1&gt;
+
+&lt;p&gt;&lt;b&gt;Source: &lt;/b&gt;&lt;a href="https://github.com/mats-nk/Eagle-library"&gt;https://github.com/mats-nk/Eagle-library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Source: &lt;/b&gt;&lt;a href="https://www.wemos.cc/en/latest/s2/s2_mini.html"&gt;https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Features:&lt;/h3&gt;
+ -  Base ESP32-S2FN4R2 WIFI IC&lt;br&gt;
  -  Type-C USB&lt;br&gt;
  -  4MB Flash&lt;br&gt;
  -  2MB PSRAM&lt;br&gt;
  -  27x IO&lt;br&gt;
- -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;</description>
+ -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;
+
+&lt;p&gt;&lt;b&gt;Picture: &lt;/b&gt;&lt;a href="https://github.com/mats-nk/Eagle-library/raw/main/Img/S2_mini_v1.0.0_pinout.jpg"&gt;Wemos S2 Mini&lt;/a&gt;&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="WEMOS_S2_MINI" x="5.08" y="-2.54"/>
 </gates>
@@ -395,11 +434,15 @@ https://www.wemos.cc/en/latest/s2/s2_mini.html&lt;br&gt;
 </devices>
 </deviceset>
 <deviceset name="WEMOS_S3_MINI" uservalue="yes">
-<description>&lt;b&gt;Wemos S3 Mini&lt;/b&gt;&lt;br&gt;
-https://www.wemos.cc/en/latest/s3/s3_mini.html&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Features:&lt;/b&gt;&lt;br&gt;
- -  based ESP32-S2FN4R2 WIFI IC&lt;br&gt;
+<description>&lt;h1&gt;Wemos S3 Mini&lt;/h1&gt;
+
+&lt;p&gt;&lt;b&gt;Source: &lt;/b&gt;&lt;a href="https://github.com/mats-nk/Eagle-library"&gt;https://github.com/mats-nk/Eagle-library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Origin: &lt;/b&gt;&lt;a href="https://www.wemos.cc/en/latest/s3/s3_mini.html"&gt;https://www.wemos.cc/en/latest/s3/s3_mini.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Features:&lt;/h3&gt;
+
+ -  Base ESP32-S2FN4R2 WIFI IC&lt;br&gt;
  -  Type-C USB&lt;br&gt;
  -  2.4 GHz Wi-Fi&lt;br&gt;
  -  Bluetooth LE&lt;br&gt;
@@ -407,7 +450,9 @@ https://www.wemos.cc/en/latest/s3/s3_mini.html&lt;br&gt;
  -  2MB PSRAM&lt;br&gt;
  -  27x IO&lt;br&gt;
  -  1x RGB LED (IO47)&lt;br&gt;
- -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;</description>
+ -  ADC, DAC, I2C, SPI, UART, USB OTG&lt;br&gt;
+
+&lt;p&gt;&lt;b&gt;Picture: &lt;/b&gt;&lt;a href="https://github.com/mats-nk/Eagle-library/raw/main/Img/S3_mini_v1.0.0_pinout.jpg"&gt;Wemos S3 Mini&lt;/a&gt;&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="WEMOS_S3_MINI" x="0" y="0"/>
 </gates>
@@ -453,7 +498,93 @@ https://www.wemos.cc/en/latest/s3/s3_mini.html&lt;br&gt;
 </device>
 </devices>
 </deviceset>
+<deviceset name="WEMOS_D1_ESP32">
+<description>&lt;h1&gt;Wemos D1 ESP32&lt;/h1&gt;
+
+&lt;p&gt;&lt;b&gt;Source: &lt;/b&gt;&lt;a href="https://github.com/mats-nk/Eagle-library"&gt;https://github.com/mats-nk/Eagle-library&lt;/a&gt;&lt;/p&gt;</description>
+<gates>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="EY9">
+<description>&lt;h1&gt;DC/DC module&lt;/h1&gt;
+
+&lt;p&gt;&lt;b&gt;Source: &lt;/b&gt;&lt;a href="https://github.com/mats-nk/Eagle-library"&gt;https://github.com/mats-nk/Eagle-library&lt;/a&gt;&lt;/p&gt;
+
+DC/DC module with fixed output.
+&lt;ul&gt;
+  &lt;li&gt;&lt;b&gt;In:&lt;/b&gt; 5-30 V&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Out:&lt;/b&gt; 3,3 V/5 V&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Output current:&lt;/b&gt; 3A (max)&lt;/li&gt;
+  &lt;li&gt;Conversion efficiency: 96% (highest)&lt;/li&gt;
+  &lt;li&gt;Output ripple: &lt;30mV&lt;/li&gt;
+  &lt;li&gt;Output precision: ±0.1V&lt;/li&gt;
+  &lt;li&gt;No-load current: &lt;1mA&lt;/li&gt;
+  &lt;li&gt;Working temperature: -40C~+85°C&lt;/li&gt;
+  &lt;li&gt;Working humidity: 20%~90%&lt;/li&gt;
+  &lt;li&gt;Size: 17.5*12*4.3mm(length*width*height)&lt;/li&gt;
+  &lt;li&gt;layer number of PCB: 2 layer board&lt;/li&gt;
+  &lt;li&gt;Shut off the function: does not support&lt;/li&gt;
+  &lt;li&gt;Cooling way: natural heat dissipation&lt;/li&gt;
+  &lt;li&gt;lsolation or not: don't take isolation&lt;/li&gt;
+  &lt;li&gt;Design aging standard: 720 hours trouble-free&lt;/li&gt;
+  &lt;li&gt;Factory aging standard: 72 hours trouble-free&lt;/li&gt;
+  &lt;li&gt;Service life of the: trouble-free for 30000 hours (the output current does not exceed the rated value)&lt;/li&gt;
+&lt;/ul&gt;</description>
+<gates>
+</gates>
+<devices>
+<device name="" package="EY9">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DC360MINI">
+<description>&lt;h1&gt;DC 360 Mini&lt;/h1&gt;
+
+&lt;p&gt;&lt;b&gt;Source: &lt;/b&gt;&lt;a href="https://github.com/mats-nk/Eagle-library"&gt;https://github.com/mats-nk/Eagle-library&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Specifications:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Module Properties: non-isolated buck&lt;/li&gt;
+  &lt;li&gt;Rectification Methods: Synchronous rectification&lt;/li&gt;
+  &lt;li&gt;Input Voltage: 4.75V – 23V&lt;/li&gt;
+  &lt;li&gt;Output Voltage: 1.0V – 17V&lt;/li&gt;
+  &lt;li&gt;Conversion Efficiency: 96%&lt;/li&gt;
+  &lt;li&gt;Switching Frequency: 340KHz&lt;/li&gt;
+  &lt;li&gt;Output Ripple: 340mV (empty cut pm)&lt;/li&gt;
+  &lt;li&gt;Load Regulation: +/- 0.5%&lt;/li&gt;
+  &lt;li&gt;Voltage Regulation: +/- 2.5%&lt;/li&gt;
+  &lt;li&gt;Working Temperature: -40c – 85c&lt;/li&gt;
+  &lt;li&gt;1.8A Constant, 3A Surge&lt;/li&gt;
+  &lt;li&gt;External Dimensions: 17mm x 11mm x 3.8mm&lt;/li&gt;
+&lt;/ul&gt;</description>
+<gates>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
