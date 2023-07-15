@@ -18,10 +18,10 @@ Hole size needs to be adjusted!
 ### D1 Mini ESP32
 
 ### S2 Mini
-<img src="Img/S2_mini_v1.0.0_pinout.jpg" width="600"/>
+<img src="Img/S2_mini_v1.0.0_pinout.jpg" width="450"/>
 
 ### S3 Mini
-<img src="Img/S3_mini_v1.0.0_pinout.jpg" width="600"/>
+<img src="Img/S3_mini_v1.0.0_pinout.jpg" width="450"/>
 
 ### DC 360 Mini
 <img src="Img/DC-DC Mini-360_1.jpg" width="300"/> <img src="Img/DC-DC Mini-360_2.jpg" width="300"/>
