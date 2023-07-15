@@ -27,5 +27,5 @@ Hole size needs to be adjusted!
 <img src="Img/DC-DC Mini-360_1.jpg" width="300"/> <img src="Img/DC-DC Mini-360_2.jpg" width="300"/>
 
 ### EY9
-<img src="Img/EY9_1.jpg" width="300"/> <img src="Img/EY9_2.jpg" width="300"/>
+<img src="Img/EY9_5v.jpg" width="300"/> <img src="Img/EY9_2.jpg" width="300"/>
 
